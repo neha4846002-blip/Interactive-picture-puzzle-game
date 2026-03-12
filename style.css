@@ -1,38 +1,60 @@
 body{
 font-family:Arial;
 text-align:center;
-background:#f4f4f4;
+background:linear-gradient(135deg,#74ebd5,#ACB6E5);
+margin:0;
+padding:20px;
 }
 
-.controls{
-margin-bottom:20px;
+#startScreen{
+background:white;
+padding:40px;
+border-radius:10px;
+width:350px;
+margin:auto;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:6px;
+background:#4CAF50;
+color:white;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#45a049;
 }
 
 .status{
 display:flex;
 justify-content:center;
 gap:20px;
-flex-wrap:wrap;
-margin-bottom:20px;
-font-weight:bold;
+background:white;
+padding:10px;
+margin:15px 0;
+border-radius:8px;
 }
 
 .gameArea{
 display:flex;
 justify-content:center;
-gap:30px;
+gap:40px;
 }
 
 #puzzleGrid{
-width:400px;
-height:400px;
+width:420px;
+height:420px;
 display:grid;
-border:3px solid black;
+border:4px solid #333;
 background:white;
 }
 
 .cell{
-border:1px solid #888;
+border:1px solid #aaa;
 }
 
 #piecesBox{
@@ -40,7 +62,7 @@ width:420px;
 display:grid;
 margin:auto;
 margin-top:20px;
-border:3px solid black;
+border:3px solid #333;
 padding:5px;
 background:white;
 }
@@ -52,8 +74,44 @@ background-repeat:no-repeat;
 }
 
 #previewImage{
-width:200px;
-height:200px;
-border:2px solid black;
+width:300px;
+height:300px;
+border:3px solid black;
 display:none;
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.popupContent{
+background:white;
+padding:40px;
+border-radius:10px;
+animation:pop 0.5s ease;
+}
+
+@keyframes pop{
+0%{transform:scale(0.5);}
+100%{transform:scale(1);}
+}
+
+#leaderboard{
+list-style:none;
+padding:0;
+}
+
+#leaderboard li{
+padding:5px;
+background:#eee;
+margin:5px;
+border-radius:5px;
 }
