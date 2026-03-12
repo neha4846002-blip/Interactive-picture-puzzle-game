@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Picture Puzzle Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Picture Puzzle Game</h1>
+
+<div class="controls">
+
+<label>Grid Level:</label>
+
+<select id="gridSize">
+<option value="3">3 × 3</option>
+<option value="4" selected>4 × 4</option>
+<option value="5">5 × 5</option>
+<option value="6">6 × 6</option>
+<option value="7">7 × 7</option>
+<option value="8">8 × 8</option>
+<option value="9">9 × 9</option>
+<option value="10">10 × 10</option>
+</select>
+
+<button onclick="startGame()">Start Game</button>
+
+<button onclick="showImage()">Image</button>
+
+</div>
+
+<div class="status">
+
+<p>Timer: <span id="timer">0</span></p>
+
+<p>Score: <span id="score">0</span></p>
+
+<p>Max Moves: <span id="maxMoves">0</span></p>
+
+<p>Moves Used: <span id="movesUsed">0</span></p>
+
+<p>Moves Left: <span id="movesLeft">0</span></p>
+
+<p>Image Views: <span id="imageViews">0</span>/3</p>
+
+</div>
+
+<div class="gameArea">
+
+<div id="puzzleGrid"></div>
+
+<img id="previewImage">
+
+</div>
+
+<h3>Pieces Box</h3>
+
+<div id="piecesBox"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+body{
+font-family:Arial;
+text-align:center;
+background:#f4f4f4;
+}
+
+.controls{
+margin-bottom:20px;
+}
+
+.status{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.gameArea{
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+#puzzleGrid{
+width:400px;
+height:400px;
+display:grid;
+border:3px solid black;
+background:white;
+}
+
+.cell{
+border:1px solid #888;
+}
+
+#piecesBox{
+width:420px;
+display:grid;
+margin:auto;
+margin-top:20px;
+border:3px solid black;
+padding:5px;
+background:white;
+}
+
+.piece{
+border:1px solid black;
+cursor:grab;
+background-repeat:no-repeat;
+}
+
+#previewImage{
+width:200px;
+height:200px;
+border:2px solid black;
+display:none;
+}
