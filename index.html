@@ -8,9 +8,11 @@
 <body>
 
 <div id="startScreen">
+
 <h1>🧩 Picture Puzzle Game</h1>
 
 <label>Select Grid Level</label>
+
 <select id="gridSize">
 <option value="3">3 × 3</option>
 <option value="4" selected>4 × 4</option>
@@ -20,9 +22,12 @@
 
 <br><br>
 
-<button id="startBtn">Start Game</button>
+<input type="file" id="imageUpload" accept="image/*">
+<p>Upload your own puzzle image</p>
 
-<p>Image will be shown for 5 seconds before puzzle starts</p>
+<br>
+
+<button id="startBtn">Start Game</button>
 
 <h3>🏆 Leaderboard</h3>
 <ul id="leaderboard"></ul>
@@ -46,24 +51,36 @@
 </div>
 
 <div class="gameArea">
+
 <div id="puzzleGrid"></div>
+
 <img id="previewImage">
+
 </div>
 
 <h3>Puzzle Pieces</h3>
+
 <div id="piecesBox"></div>
 
 </div>
 
 
 <div id="popup" class="popup">
+
 <div class="popupContent">
+
 <h2 id="popupTitle"></h2>
+
 <p id="popupMessage"></p>
+
 <button onclick="restartGame()">Play Again</button>
-</div>
+
 </div>
 
+</div>
+
+
+<canvas id="confettiCanvas"></canvas>
 
 <script src="script.js"></script>
 
